@@ -12,17 +12,17 @@ namespace IT {
 	enum IDTYPE { V = 1, F = 2, P = 3, L = 3 };    // типы идентификаторов: переменная, функция, параметр, литерал
 
 	struct Entry {
-		int idxfirstLE;						// индекс первой строки в таблице лексем
-		char id[ID_MAXSIZE];				// идентификатор
-		IDDATATYPE iddatatype;				// тип данных
-		IDTYPE idtype;						// тип идентификатора
+		int idxfirstLE;							// индекс первой строки в таблице лексем
+		char id[ID_MAXSIZE];					// идентификатор
+		IDDATATYPE iddatatype;					// тип данных
+		IDTYPE idtype;							// тип идентификатора
 		union {
-			int vint;						// значение integer
+			int vint;							// значение integer
 			struct {
-				char len;                   // количество символов в string
-				char str[TI_STR_MAXSIZE - 1]; // cимволы string
-			}vstr[TI_STR_MAXSIZE];			// значение string
-		}value;								// значение идентификатора
+				char len;						// количество символов в string
+				char str[TI_STR_MAXSIZE - 1];	// cимволы string
+			}vstr;								// значение string
+		}value;									 // значение идентификатора
 
 	};
 
@@ -32,7 +32,7 @@ namespace IT {
 		Entry* table;
 	};
 
-	IdTable Create(int size);
+	IdTable Create();
 
 	void Add(IdTable& idtable, Entry entry);
 

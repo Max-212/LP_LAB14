@@ -3,7 +3,7 @@
 using namespace LT;
 
 
-LexTable LT::Create(int size) {
+LexTable LT::Create() {
 
 	LexTable LexTable = {};
 	LexTable.size = 0;
@@ -26,3 +26,7 @@ void LT::Delete(LexTable& lextable) {
 	lextable = temp;
 }
 
+Entry LT::GetEntry(LexTable &lextable, int n) {
+	
+	return lextable.table[n];
+}

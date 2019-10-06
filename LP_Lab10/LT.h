@@ -38,9 +38,7 @@ namespace LT {
 	};
 
 
-	LexTable Create(
-		int size					 // макс размер таблицы лексем
-	);
+	LexTable Create();
 
 	void Add(
 		LexTable& lextable,			 // экземпляр табл лексем
