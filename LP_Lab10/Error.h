@@ -14,6 +14,7 @@
 
 #define ERROR_MAX_ENTRY 1000
 
+
 namespace Error
 {
 	struct ERROR
